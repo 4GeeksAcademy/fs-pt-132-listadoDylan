@@ -9,3 +9,33 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    background-color: rgb(200, 222, 241);
+    
+}
+.eliminar{
+    display: none;
+}
+/* el hover hasta que no estemos encima del li no busca el boton y lo ponemos visible con inline */
+li:hover .eliminar{
+    display: inline;
+}
+.listado{
+    text-align: center;
+    width:35rem ;
+    margin-top: 10rem;
+    background-color: rgb(200, 222, 241);
+}
+.modificacion{
+ background-color: rgb(200, 222, 241);
+    width: 100%;
+    border-radius: 8px;
+    
+   
+}
+.pokemon{
+    background-color: rgb(217, 231, 243);
+}
