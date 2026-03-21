@@ -19,7 +19,7 @@ const Home = () => {
 
 		e.preventDefault()
 		// diferente a para que si esta vacio no  añadas
-		if (input != vacio) {
+		if (input.trim() != vacio) {
 
 			console.log("handleSubmit se acaba de ejecutar")
 			// spread operator crea una copia de array y de objetos  atraves de una copia de list works mas la suma que le añada  input
@@ -46,14 +46,17 @@ const Home = () => {
 
 	return (
 		<div className=" listado ">
+			<header>    
+				<h1 className="display-1">To Do List</h1>
+			</header>
 			{/* con la funcion onSubmit enviamos la informacion del formulario  */}
 			<form onSubmit={handleSubmit} className=" display-flex justify-content-center ">
-				<input type="text" className="modificacion" value={input} onChange={handEvent} />
+				<input type="text" className="modificacion form-control" value={input} onChange={handEvent} />
 				<input type="submit" hidden />
 
 
 			</form>
-			<ul className="list-unstyled list-group">
+			<ul className="list-unstyled list-group mt-3 border border-1 border-secondary">
 				{listWorks.length === 0 ? <li className="modificacion">  "No hay tareas, añadir tareas"</li> : null}
 				{/* con list y && podemos condicionar que se inicie el mapeado si list esta en true */}
 				{/* colocamos un boton que elimine de la list el valor del map creado le enviamos el valor de indice  */}
